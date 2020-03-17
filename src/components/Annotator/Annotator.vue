@@ -36,7 +36,7 @@ export default {
       instance.setTheme('dark')
       instance.disableElements(this.disabledElements);
       setInterval(() => {
-        var slider = el.getElementsByClassName('sliders-container')[0]
+        var slider = instance.iframeWindow.document.getElementsByClassName('sliders-container')[0]
         if(slider)
           slider.parentElement.removeChild(slider)
       },100)

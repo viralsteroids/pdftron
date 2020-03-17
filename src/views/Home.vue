@@ -15,10 +15,12 @@ import Sidebar from '@/components/Sidebar/Sidebar.vue'
 
 export default {
   components: { Annotator, Navbar, Sidebar},
-  data: () => ({
-    tags: [],
-    filename: 'Demo1.1 КС-3.pdf',
-  }),
+  data: function() {
+    return {
+      tags: [],
+      filename: this.$route.query.file || 'Demo1.1 КС-2.pdf',  
+    }
+  },
   created() {
     this.tags = [
       {
